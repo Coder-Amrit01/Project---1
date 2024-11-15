@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Singh FC</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!--TOP Section -->
+    <header>
+        <div class="container">
+            <h1>Contact Singh FC</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html" target="_blank">Home</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="Team.html" target="_blank">Team</a></li>
+                    <li><a href="matches.html" target="_blank">Matches</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="contact.html"target="_blank">Contact</a></li>
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch with Singh FC</h2>
+            <p>If you have any questions, feel free to contact us using the form below or visit our stadium!</p>
+            
+            <!-- Contact Form -->
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <p id="status-message" class="status-message"></p>
+            </form>
+
+            <!-- Location Map -->
+            <div class="location">
+                <h3>Our Location</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094114!2d144.95565151531693!3d-37.81720997975153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xb41e17a4baf04251!2sMarvel%20Stadium!5e0!3m2!1sen!2s!4v1642435113347!5m2!1sen!2s" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="www.facebook.com"><img src="projectimages/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="www.twitter.com"><img src="projectimages/twitter.png" alt="Twitter"></a></li>
+                    <li><a href="www.instagram.com"><img src="projectimages/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="www.youtube.com"><img src="projectimages/youtube.png" alt="YouTube"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="Team.html">Teams</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">Standings</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up for the latest news and updates on your favorite teams.</p>
+        <form action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent form submission
+
+    // Simple form validation
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name === '' || email === '' || message === '') {
+        document.getElementById('status-message').textContent = 'Please fill out all fields.';
+        return;
+    }
+
+    // Simulate form submission (you can integrate an actual backend here)
+    document.getElementById('status-message').textContent = 'Thank you! Your message has been sent.';
+
+    // Clear the form
+    document.getElementById('contact-form').reset();
+});
+
+    </script>
+  
+      <!-- Promotions Section -->
+      <div class="footer-promotions">
+        <h3>Promotions</h3>
+        <p>Get the best deals on merchandise and tickets!</p>
+        <ul>
+            <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
+            <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="acebook.com/home.php" class="social-icon">🔵</a>
+          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
+          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
+          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
+    </div>
+  </footer>
+
+    
+</body>
+</html>

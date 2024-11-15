@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singh FC - Matches</title>
+    <link rel="stylesheet" href="matches.css">
+</head>
+<body>
+    <!--TOP Section -->
+    <header>
+        <div class="container">
+            <h1>Singh FC - Match Fixtures</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html" target="_blank">Home</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="Team.html" target="_blank">Team</a></li>
+                    <li><a href="matches.html" target="_blank">Matches</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="contact.html"target="_blank">Contact</a></li>
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Matches Section -->
+    <section id="matches" class="matches">
+        <div class="container">
+            <h2>Upcoming Matches</h2>
+            <div id="upcoming-matches" class="match-grid">
+                <!-- Match 1 -->
+                <div class="match">
+                    <div class="match-info">
+                        <h3>Singh FC vs United FC</h3>
+                        <p>Date: October 25, 2024</p>
+                        <p>Stadium: National Arena</p>
+                        <p>Time: 7:30 PM</p>
+                    </div>
+                    <a href="tickets.html" target="_blank" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+
+                <!-- Match 2 -->
+                <div class="match">
+                    <div class="match-info">
+                        <h3>Singh FC vs Lions FC</h3>
+                        <p>Date: November 5, 2024</p>
+                        <p>Stadium: City Stadium</p>
+                        <p>Time: 6:00 PM</p>
+                    </div>
+                    <a href="tickets.html" target="_blank" class="buy-tickets-btn">Buy Tickets</a>
+                </div>
+
+        <div class="container past-matches">
+            <h2>Past Matches</h2>
+            <div id="past-matches" class="match-grid">
+                <!-- Past Match 1 -->
+                <div class="match past">
+                    <div class="match-info">
+                        <h3>Singh FC vs Tigers FC</h3>
+                        <p>Date: October 15, 2024</p>
+                        <p>Result: 2 - 1 (Win)</p>
+                    </div>
+                </div>
+
+                <!-- Past Match 2 -->
+                <div class="match past">
+                    <div class="match-info">
+                        <h3>Singh FC vs Eagles FC</h3>
+                        <p>Date: October 7, 2024</p>
+                        <p>Result: 1 - 1 (Draw)</p>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="Team.html">Teams</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">Standings</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up for the latest news and updates on your favorite teams.</p>
+        <form action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".footer-newsletter form");
+  const emailInput = form.querySelector("input[type='email']");
+  const message = document.createElement("p");
+  message.style.display = "none"; // Start hidden
+  form.appendChild(message);
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+    const emailValue = emailInput.value.trim();
+    if (!validateEmail(emailValue)) {
+      showMessage("Please enter a valid email address.", "error");
+    } else {
+      showMessage("Thank you for subscribing!", "success");
+      emailInput.value = ""; // Clear the input
+      // Here, you could add an API call to submit the email to your database or newsletter service
+    }
+  });
+
+  function validateEmail(email) {
+    // Basic email validation regex
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  function showMessage(text, type) {
+    message.textContent = text;
+    message.style.display = "block";
+    message.style.color = type === "error" ? "red" : "green";
+  }
+});
+
+      </script>
+  
+      <!-- Promotions Section -->
+      <div class="footer-promotions">
+        <h3>Promotions</h3>
+        <p>Get the best deals on merchandise and tickets!</p>
+        <ul>
+          <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
+          <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
+          
+        </ul>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="acebook.com/home.php" class="social-icon">🔵</a>
+          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
+          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
+          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
+    </div>
+  </footer>
+
+    
+</body>
+</html>

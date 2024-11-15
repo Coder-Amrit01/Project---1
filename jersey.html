@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singh FC Jersey Purchase</title>
+  <style>
+    /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.header {
+  background-color: #222;
+  color: #f1c40f;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1em;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.jersey-display {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.jersey-image {
+  width: 50%;
+  height: auto;
+}
+
+.jersey-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.jersey-details h2 {
+  color: #222;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.jersey-price {
+  font-size: 1.5em;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.jersey-details label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.jersey-details select, .jersey-details input[type="number"] {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.buy-now-button {
+  padding: 12px;
+  background-color: #f1c40f;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #e1b10e;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .footer h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #f1c40f;
+  }
+  
+  .footer-links ul,
+  .footer-promotions ul {
+    list-style: none;
+  }
+  
+  .footer-links ul li,
+  .footer-promotions ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a,
+  .footer-promotions ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-promotions ul li a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-newsletter p {
+    margin-bottom: 15px;
+  }
+  
+  .footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 5px;
+  }
+  
+  .footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #e1b10e;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social .social-icon {
+    font-size: 1.5em;
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9em;
+  }
+  
+  .footer-bottom p {
+    margin-top: 10px;
+  }
+  
+  /* Promotions Section */
+  .footer-promotions ul li a {
+    font-weight: bold;
+  }
+  
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Singh FC Official Jersey</h1>
+    <p>Show your support by wearing the official Singh FC jersey!</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+    <section class="jersey-display">
+      <img src="projectimages/jersey.jpeg" alt="Singh FC Jersey" class="jersey-image">
+      <div class="jersey-details">
+        <h2>Singh FC Home Jersey 2023</h2>
+        <p class="jersey-price">$49.99</p>
+        <p>Available in all sizes! Grab yours now and support Singh FC!</p>
+        
+        <!-- Size Selector -->
+        <label for="size">Select Size:</label>
+        <select id="size" name="size" required>
+          <option value="">Choose Size</option>
+          <option value="S">Small</option>
+          <option value="M">Medium</option>
+          <option value="L">Large</option>
+          <option value="XL">Extra Large</option>
+        </select>
+        
+        <!-- Quantity Selector -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" required>
+
+        <!-- Total Price -->
+        <p class="total-price">Total Price: $49.99</p>
+
+        <!-- Buy Now Button -->
+        <button class="buy-now-button" onclick="purchaseJersey()">Buy Now</button>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="Team.html">Teams</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">Standings</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up for the latest news and updates on your favorite teams.</p>
+        <form action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+  
+      <!-- Promotions Section -->
+      <div class="footer-promotions">
+        <h3>Promotions</h3>
+        <p>Get the best deals on merchandise and tickets!</p>
+        <ul>
+          <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
+          <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
+     
+        </ul>
+      </div>
+      
+  
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="acebook.com/home.php" class="social-icon">🔵</a>
+          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
+          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
+          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2023 Singh FC. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:support@singhfc.com">support@singhfc.com</a></p>
+    </div>
+  </footer>
+
+  
+  <script >
+    // Update Total Price based on Quantity
+document.getElementById("quantity").addEventListener("input", updateTotalPrice);
+
+function updateTotalPrice() {
+  const pricePerJersey = 49.99;
+  const quantity = document.getElementById("quantity").value;
+  const totalPrice = pricePerJersey * quantity;
+  document.querySelector(".total-price").textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+}
+
+// Purchase Jersey Function
+function purchaseJersey() {
+  const size = document.getElementById("size").value;
+  const quantity = document.getElementById("quantity").value;
+
+  if (!size) {
+    alert("Please select a size.");
+    return;
+  }
+
+  alert(`Thank you for purchasing ${quantity} Singh FC jersey(s)! Size: ${size}`);
+}
+
+  </script>
+</body>
+</html>

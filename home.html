@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singh FC - Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- TOP Section -->
+    <header>
+        <div class="container">
+            <h1>Singh FC</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html" target="_blank">Home</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="Team.html" target="_blank">Team</a></li>
+                    <li><a href="matches.html" target="_blank">Matches</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="contact.html"target="_blank">Contact</a></li>
+                    <li><a href="blog.html" target="_blank">Blog</a></li>
+                    
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CLUB Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            
+            <h2 id="a">Champions of 2024</h2>
+           
+                
+            <a href="JOIN.html" target="_blank"> <button class="cta"> Join the Fan Club  </button> </a>
+                
+           
+            
+        </div>
+    </section>
+
+    <!-- Upcoming Matches Section with Countdown -->
+    <section id="matches" class="matches">
+        <div class="container">
+            <h2>Upcoming Matches</h2>
+            <div class="countdown">
+                <h3>Next Match In:</h3>
+                <div id="timer">
+                    <span id="days">00</span> Days
+                    <span id="hours">00</span> Hours
+                    <span id="minutes">00</span> Minutes
+                    <span id="seconds">00</span> Seconds
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Set the date and time of the next match
+const nextMatchDate = new Date("2024-11-01T15:00:00").getTime(); // Change this date and time as needed
+
+// Update the countdown every 1 second
+const countdownInterval = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = nextMatchDate - now;
+
+    // Time calculations for days, hours, minutes, and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the corresponding elements
+    document.getElementById("days").textContent = String(days).padStart(2, '0');
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+
+    // If the countdown is over, write some text
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("timer").innerHTML = "The match has started!";
+    }
+}, 1000);
+
+    </script>
+
+    <!-- Team Highlights Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2>Meet Our Stars</h2>              
+            <div class="team-grid">
+                <div class="player-card">
+                    <img src="projectimages/gurjant.jpeg" alt="Player 1">
+                    <h3>Gurjant Singh</h3>
+                    <p>Position: Forward</p>
+                </div>
+                <div class="player-card">
+                    <img src="projectimages/amritpal.jpeg" alt="Player 2">
+                    <h3>Amritpal Singh</h3>
+                    <p>Position: Midfielder</p>
+                </div>
+                <div class="player-card">
+                    <img src="projectimages/gurniwaz.jpeg" alt="Player 3">
+                    <h3>Gurniwaz Singh</h3>
+                    <p>Position: Defender</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="Team.html">Teams</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">Standings</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up for the latest news and updates on your favorite teams.</p>
+        <form action="#">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector(".footer-newsletter form");
+  const emailInput = form.querySelector("input[type='email']");
+  const message = document.createElement("p");
+  message.style.display = "none"; // Start hidden
+  form.appendChild(message);
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+    const emailValue = emailInput.value.trim();
+    if (!validateEmail(emailValue)) {
+      showMessage("Please enter a valid email address.", "error");
+    } else {
+      showMessage("Thank you for subscribing!", "success");
+      emailInput.value = ""; // Clear the input
+      // Here, you could add an API call to submit the email to your database or newsletter service
+    }
+  });
+
+  function validateEmail(email) {
+    // Basic email validation regex
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+
+  function showMessage(text, type) {
+    message.textContent = text;
+    message.style.display = "block";
+    message.style.color = type === "error" ? "red" : "green";
+  }
+});
+    </script>
+  
+      <!-- Promotions Section -->
+      <div class="footer-promotions">
+        <h3>Promotions</h3>
+        <p>Get the best deals on merchandise and tickets!</p>
+        <ul>
+            <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
+            <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="acebook.com/home.php" class="social-icon">🔵</a>
+          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
+          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
+          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
+    </div>
+  </footer>
+  
+
+    
+</body>
+</html>

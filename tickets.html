@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singh FC Ticket Purchase</title>
+  <style>
+    /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+.header {
+  background-color: #222;
+  color: #f1c40f;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1em;
+}
+
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.ticket-purchase {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.ticket-details h2 {
+  color: #333;
+  font-size: 1.5em;
+  margin-top: 20px;
+}
+
+.ticket-details label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.ticket-details select,
+.ticket-details input[type="number"] {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.total-price {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.buy-now-button {
+  padding: 12px;
+  background-color: #f1c40f;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+  background-color: #e1b10e;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap;
+  }
+  
+  .footer h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    color: #f1c40f;
+  }
+  
+  .footer-links ul,
+  .footer-promotions ul {
+    list-style: none;
+  }
+  
+  .footer-links ul li,
+  .footer-promotions ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links ul li a,
+  .footer-promotions ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links ul li a:hover,
+  .footer-promotions ul li a:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-newsletter p {
+    margin-bottom: 15px;
+  }
+  
+  .footer-newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 70%;
+    margin-right: 5px;
+  }
+  
+  .footer-newsletter button {
+    padding: 10px 20px;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .footer-newsletter button:hover {
+    background-color: #e1b10e;
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .footer-social .social-icon {
+    font-size: 1.5em;
+    color: #ddd;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social .social-icon:hover {
+    color: #f1c40f;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9em;
+  }
+  
+  .footer-bottom p {
+    margin-top: 10px;
+  }
+  
+  /* Promotions Section */
+  .footer-promotions ul li a {
+    font-weight: bold;
+  }
+  
+
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <h1>Singh FC Ticket Purchase</h1>
+    <p>Buy your tickets and support Singh FC live!</p>
+  </header>
+
+  <!-- Main Content Section -->
+  <main class="main-content">
+    <section class="ticket-purchase">
+      <div class="ticket-details">
+        <h2>Select Your Match</h2>
+        <label for="match">Choose a Match:</label>
+        <select id="match" required>
+          <option value="">Select a Match</option>
+          <option value="Match 1">Singh FC vs. Rivals United</option>
+          <option value="Match 2">Singh FC vs. Legends FC</option>
+          <option value="Match 3">Singh FC vs. City Stars</option>
+        </select>
+
+        <!-- Seat Type Selector -->
+        <h2>Select Seat Type</h2>
+        <label for="seat-type">Seat Type:</label>
+        <select id="seat-type" onchange="updateTotalPrice()" required>
+          <option value="">Select Seat Type</option>
+          <option value="general">General Admission - $30</option>
+          <option value="vip">VIP - $100</option>
+          <option value="premium">Premium - $200</option>
+        </select>
+
+        <!-- Quantity Selector -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1" onchange="updateTotalPrice()" required>
+
+        <!-- Total Price -->
+        <p class="total-price">Total Price: $0.00</p>
+
+        <!-- Buy Now Button -->
+        <button class="buy-now-button" onclick="purchaseTickets()">Purchase Tickets</button>
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Footer Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="blog.html">News</a></li>
+          <li><a href="Team.html">Teams</a></li>
+          <li><a href="matches.html">Matches</a></li>
+          <li><a href="about.html">Standings</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Newsletter Signup -->
+      <div class="footer-newsletter">
+        <h3>Newsletter</h3>
+        <p>Sign up for the latest news and updates on your favorite teams.</p>
+        <form action="">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+  
+      <!-- Promotions Section -->
+      <div class="footer-promotions">
+        <h3>Promotions</h3>
+        <p>Get the best deals on merchandise and tickets!</p>
+        <ul>
+          <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
+          <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
+          
+        </ul>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="acebook.com/home.php" class="social-icon">🔵</a>
+          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
+          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
+          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2023 Singh FC. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:support@singhfc.com">support@singhfc.com</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Update Total Price based on Seat Type and Quantity
+function updateTotalPrice() {
+  const seatPrices = {
+    general: 30,
+    vip: 100,
+    premium: 200,
+  };
+
+  const seatType = document.getElementById("seat-type").value;
+  const quantity = document.getElementById("quantity").value;
+
+  // Calculate total price if seat type and quantity are valid
+  if (seatType && quantity) {
+    const totalPrice = seatPrices[seatType] * quantity;
+    document.querySelector(".total-price").textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+  } else {
+    document.querySelector(".total-price").textContent = "Total Price: $0.00";
+  }
+}
+
+// Purchase Tickets Function
+function purchaseTickets() {
+  const match = document.getElementById("match").value;
+  const seatType = document.getElementById("seat-type").value;
+  const quantity = document.getElementById("quantity").value;
+
+  if (!match || !seatType || !quantity) {
+    alert("Please select a match, seat type, and specify the quantity.");
+    return;
+  }
+
+  alert(`Thank you for purchasing ${quantity} ticket(s) for ${match}! Seat Type: ${seatType.toUpperCase()}`);
+}
+
+  </script>
+</body>
+</html>
