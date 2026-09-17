@@ -3,147 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singh FC Blog</title>
-    <link rel="stylesheet" href="blog.css">
+    <title>Singh FC | Club News</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- TOP Section -->
-    <header>
-        <div class="container">
-            <h1>Singh FC Blog</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html" target="_blank">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                    <li><a href="Team.html" target="_blank">Team</a></li>
-                    <li><a href="matches.html" target="_blank">Matches</a></li>
-                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
-                    <li><a href="contact.html"target="_blank">Contact</a></li>
-                    <li><a href="blog.html" target="_blank">Blog</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Featured Post Section -->
-    <section id="featured-post" class="featured-post">
-        <div class="container">
-            <h2>Featured Post</h2>
-            <div class="featured-post-content">
-                <img src="projectimages/4.jpeg" alt="Featured Post Image">
-                <div class="featured-post-info">
-                    <h3>Singh FC's Road to Victory: 2024 Championship</h3>
-                    <p>October 5, 2024 | By Admin</p>
-                    <p>
-                        Singh FC has once again shown its dominance on the pitch, claiming the championship title in a thrilling match
-                        against their arch-rivals. Let's dive into how the team prepared and what led to this historic win.
-                    </p>
-                    <a href="https://thepunjabfc.com/" target="_blank" class="read-more">Read More</a>
-                </div>
+<header class="site-header">
+
+    <div class="container nav-wrap">
+
+        <a href="home.html" class="brand">
+            <span class="brand-mark">SFC</span>
+            <span class="brand-name">SINGH FC</span>
+        </a>
+
+        <button class="menu-toggle" type="button">☰</button>
+
+        <nav class="main-nav">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html">Matches</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html" class="active">News</a>
+            <a href="contact.html">Contact</a>
+            <a href="tickets.html" class="nav-cta">Tickets</a>
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="eyebrow">SINGH FC MEDIA</span>
+
+        <h1>Club News.</h1>
+
+        <p>
+            Stories from the pitch, training ground and around the club.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <article class="featured-news">
+
+            <div class="featured-news-image">
+                <img
+                    src="projectimages/4.jpeg"
+                    alt="Singh FC championship"
+                >
             </div>
-        </div>
-    </section>
 
-    <!-- Blog Posts Section -->
-    <section id="blog-posts" class="blog-posts">
-        <div class="container">
-            <h2>Latest Blog Posts</h2>
-            <div id="post-grid" class="post-grid">
-                <!-- Blog Post 1 -->
-                <div class="post">
-                    <img src="projectimages/2.jpeg" alt="Post Image 1">
-                    <div class="post-info">
-                        <h3>Match Review: Singh FC vs United FC</h3>
-                        <p>September 28, 2024 | By Admin</p>
-                        <p>
-                            A detailed analysis of the match between Singh FC and United FC, highlighting the key moments, players, and tactics that led to Singh FC's remarkable performance.
-                        </p>
-                        <a href="https://thepunjabfc.com/kbfc-vs-pfc-15-sep-2024-match-activity/" target="_blank" class="read-more">Read More</a>
-                    </div>
+
+            <div class="featured-news-content">
+
+                <span class="eyebrow">
+                    FEATURED STORY · 05 OCT 2026
+                </span>
+
+                <h2>
+                    Singh FC's Road to Victory
+                </h2>
+
+                <p>
+                    A look back at the mentality, preparation and defining
+                    moments that shaped one of the club's biggest fictional
+                    championship campaigns.
+                </p>
+
+                <div class="article-meta">
+                    <span>By Singh FC Editorial</span>
+                    <span>6 min read</span>
                 </div>
 
-                <!-- Blog Post 2 -->
-                <div class="post">
-                    <img src="projectimages/train.jpeg" alt="Post Image 2">
-                    <div class="post-info">
-                        <h3>Training Secrets: How Singh FC Stays at the Top</h3>
-                        <p>September 21, 2024 | By Admin</p>
-                        <p>
-                            Discover the unique training methods that Singh FC employs to keep their players fit and focused throughout the season.
-                        </p>
-                        <a href="https://thepunjabfc.com/pfc-vs-hfc-25-sep-2024-match-activity/" target="_blank" class="read-more">Read More</a>
-                    </div>
+                <a href="#latest" class="btn btn-primary">
+                    Read Latest Stories →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="section section-dark" id="latest">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">LATEST</span>
+
+            <h2>From the club.</h2>
+
+        </div>
+
+
+        <div class="news-grid">
+
+            <article class="news-card">
+
+                <img
+                    src="projectimages/2.jpeg"
+                    alt="Singh FC match review"
+                >
+
+                <div class="news-card-content">
+
+                    <span>
+                        28 SEP 2026 · MATCH REPORT
+                    </span>
+
+                    <h3>
+                        Match Review: Singh FC vs United FC
+                    </h3>
+
+                    <p>
+                        Breaking down the key moments, tactical changes
+                        and standout performances from matchday.
+                    </p>
+
+                    <a href="#latest">Read story →</a>
+
                 </div>
 
-                <!-- Blog Post 3 -->
-                <div class="post">
-                    <img src="projectimages/1.jpeg" alt="Post Image 3">
-                    <div class="post-info">
-                        <h3>Player Spotlight: Gurjant Singh's Journey to Stardom</h3>
-                        <p>September 15, 2024 | By Admin</p>
-                        <p>
-                            Get to know the inspiring story of Gurjant Singh, one of Singh FC's key players, and how he rose through the ranks to become a star on the team.
-                        </p>
-                        <a href="https://thepunjabfc.com/pfc-vs-ofc-20-sept-2024-match-activity/" target="_blank" class="read-more">Read More</a>
-                    </div>
-                </div>  
-    </section>
+            </article>
 
-    <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Footer Links -->
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="Team.html">Teams</a></li>
-          <li><a href="matches.html">Matches</a></li>
-          <li><a href="about.html">Standings</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-  
-      <!-- Newsletter Signup -->
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Sign up for the latest news and updates on your favorite teams.</p>
-        <form action="#">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-  
-      <!-- Promotions Section -->
-      <div class="footer-promotions">
-        <h3>Promotions</h3>
-        <p>Get the best deals on merchandise and tickets!</p>
-        <ul>
-          <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
-          <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
-          
-        </ul>
-      </div>
-  
-      <!-- Social Media Links -->
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="acebook.com/home.php" class="social-icon">🔵</a>
-          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
-          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
-          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+
+            <article class="news-card">
+
+                <img
+                    src="projectimages/train.jpeg"
+                    alt="Singh FC training"
+                >
+
+                <div class="news-card-content">
+
+                    <span>
+                        21 SEP 2026 · TRAINING
+                    </span>
+
+                    <h3>
+                        Inside the Training Ground
+                    </h3>
+
+                    <p>
+                        Discover the routines, intensity and preparation
+                        behind Singh FC's matchday performances.
+                    </p>
+
+                    <a href="#latest">Read story →</a>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <img
+                    src="projectimages/1.jpeg"
+                    alt="Gurjant Singh"
+                >
+
+                <div class="news-card-content">
+
+                    <span>
+                        15 SEP 2026 · PLAYER SPOTLIGHT
+                    </span>
+
+                    <h3>
+                        Player Spotlight: Gurjant Singh
+                    </h3>
+
+                    <p>
+                        From development football to leading the attack,
+                        discover the story behind the number nine.
+                    </p>
+
+                    <a href="#latest">Read story →</a>
+
+                </div>
+
+            </article>
+
         </div>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
-    </div>
-  </footer>
 
-    
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="container cta-inner">
+
+        <div>
+
+            <span class="eyebrow">MORE TO COME</span>
+
+            <h2>Stay close to the club.</h2>
+
+        </div>
+
+        <a href="JOIN.html" class="btn btn-primary">
+            Join Fan Club →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <a href="home.html" class="brand footer-brand">
+                <span class="brand-mark">SFC</span>
+                <span class="brand-name">SINGH FC</span>
+            </a>
+
+            <p>
+                Built for the 90 minutes.<br>
+                Designed for the next generation.
+            </p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html">Matches</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <a href="tickets.html">Tickets</a>
+            <a href="jersey.html">Official Jersey</a>
+            <a href="JOIN.html">Fan Club</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h4>Stay Connected</h4>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">→</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#">IG</a>
+                <a href="#">X</a>
+                <a href="#">YT</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+        <span>© 2026 Singh FC. Portfolio project.</span>
+        <span>Football. Identity. Ambition.</span>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>

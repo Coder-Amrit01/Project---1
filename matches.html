@@ -3,167 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singh FC - Matches</title>
-    <link rel="stylesheet" href="matches.css">
+    <title>Singh FC | Fixtures & Results</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!--TOP Section -->
-    <header>
-        <div class="container">
-            <h1>Singh FC - Match Fixtures</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html" target="_blank">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                    <li><a href="Team.html" target="_blank">Team</a></li>
-                    <li><a href="matches.html" target="_blank">Matches</a></li>
-                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
-                    <li><a href="contact.html"target="_blank">Contact</a></li>
-                    <li><a href="blog.html" target="_blank">Blog</a></li>
-                    
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Matches Section -->
-    <section id="matches" class="matches">
-        <div class="container">
-            <h2>Upcoming Matches</h2>
-            <div id="upcoming-matches" class="match-grid">
-                <!-- Match 1 -->
-                <div class="match">
-                    <div class="match-info">
-                        <h3>Singh FC vs United FC</h3>
-                        <p>Date: October 25, 2024</p>
-                        <p>Stadium: National Arena</p>
-                        <p>Time: 7:30 PM</p>
-                    </div>
-                    <a href="tickets.html" target="_blank" class="buy-tickets-btn">Buy Tickets</a>
-                </div>
+<header class="site-header">
 
-                <!-- Match 2 -->
-                <div class="match">
-                    <div class="match-info">
-                        <h3>Singh FC vs Lions FC</h3>
-                        <p>Date: November 5, 2024</p>
-                        <p>Stadium: City Stadium</p>
-                        <p>Time: 6:00 PM</p>
-                    </div>
-                    <a href="tickets.html" target="_blank" class="buy-tickets-btn">Buy Tickets</a>
-                </div>
+    <div class="container nav-wrap">
 
-        <div class="container past-matches">
-            <h2>Past Matches</h2>
-            <div id="past-matches" class="match-grid">
-                <!-- Past Match 1 -->
-                <div class="match past">
-                    <div class="match-info">
-                        <h3>Singh FC vs Tigers FC</h3>
-                        <p>Date: October 15, 2024</p>
-                        <p>Result: 2 - 1 (Win)</p>
-                    </div>
-                </div>
+        <a href="home.html" class="brand">
+            <span class="brand-mark">SFC</span>
+            <span class="brand-name">SINGH FC</span>
+        </a>
 
-                <!-- Past Match 2 -->
-                <div class="match past">
-                    <div class="match-info">
-                        <h3>Singh FC vs Eagles FC</h3>
-                        <p>Date: October 7, 2024</p>
-                        <p>Result: 1 - 1 (Draw)</p>
-                    </div>
-                </div>
-    </section>
+        <button class="menu-toggle" type="button">☰</button>
 
-    <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Footer Links -->
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="Team.html">Teams</a></li>
-          <li><a href="matches.html">Matches</a></li>
-          <li><a href="about.html">Standings</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-  
-      <!-- Newsletter Signup -->
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Sign up for the latest news and updates on your favorite teams.</p>
-        <form action="#">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".footer-newsletter form");
-  const emailInput = form.querySelector("input[type='email']");
-  const message = document.createElement("p");
-  message.style.display = "none"; // Start hidden
-  form.appendChild(message);
+        <nav class="main-nav">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html" class="active">Matches</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a href="tickets.html" class="nav-cta">Tickets</a>
+        </nav>
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevents the form from submitting in the traditional way
-
-    const emailValue = emailInput.value.trim();
-    if (!validateEmail(emailValue)) {
-      showMessage("Please enter a valid email address.", "error");
-    } else {
-      showMessage("Thank you for subscribing!", "success");
-      emailInput.value = ""; // Clear the input
-      // Here, you could add an API call to submit the email to your database or newsletter service
-    }
-  });
-
-  function validateEmail(email) {
-    // Basic email validation regex
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-
-  function showMessage(text, type) {
-    message.textContent = text;
-    message.style.display = "block";
-    message.style.color = type === "error" ? "red" : "green";
-  }
-});
-
-      </script>
-  
-      <!-- Promotions Section -->
-      <div class="footer-promotions">
-        <h3>Promotions</h3>
-        <p>Get the best deals on merchandise and tickets!</p>
-        <ul>
-          <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
-          <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
-          
-        </ul>
-      </div>
-  
-      <!-- Social Media Links -->
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="acebook.com/home.php" class="social-icon">🔵</a>
-          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
-          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
-          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
-        </div>
-      </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
-    </div>
-  </footer>
 
-    
+</header>
+
+
+<main>
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <span class="eyebrow">2026/27 SEASON</span>
+
+        <h1>Fixtures.</h1>
+
+        <p>
+            Every fixture. Every result. Every 90 minutes.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">UPCOMING</span>
+
+            <h2>Next fixtures.</h2>
+
+        </div>
+
+
+        <div class="match-list">
+
+            <article class="match-card featured-match">
+
+                <div class="match-date">
+                    <span>OCT</span>
+                    <strong>17</strong>
+                    <small>2026</small>
+                </div>
+
+                <div class="match-teams">
+
+                    <span>HOME</span>
+
+                    <h3>
+                        Singh FC <b>vs</b> United FC
+                    </h3>
+
+                    <p>
+                        National Arena · 19:30
+                    </p>
+
+                </div>
+
+                <div class="match-action">
+                    <span class="match-status">UPCOMING</span>
+                    <a href="tickets.html" class="btn btn-primary">
+                        Tickets
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="match-card">
+
+                <div class="match-date">
+                    <span>NOV</span>
+                    <strong>05</strong>
+                    <small>2026</small>
+                </div>
+
+                <div class="match-teams">
+
+                    <span>AWAY</span>
+
+                    <h3>
+                        Lions FC <b>vs</b> Singh FC
+                    </h3>
+
+                    <p>
+                        City Stadium · 18:00
+                    </p>
+
+                </div>
+
+                <div class="match-action">
+                    <span class="match-status">UPCOMING</span>
+                    <a href="tickets.html" class="btn btn-secondary">
+                        Tickets
+                    </a>
+                </div>
+
+            </article>
+
+
+            <article class="match-card">
+
+                <div class="match-date">
+                    <span>NOV</span>
+                    <strong>21</strong>
+                    <small>2026</small>
+                </div>
+
+                <div class="match-teams">
+
+                    <span>HOME</span>
+
+                    <h3>
+                        Singh FC <b>vs</b> City Stars
+                    </h3>
+
+                    <p>
+                        Singh FC Arena · 20:00
+                    </p>
+
+                </div>
+
+                <div class="match-action">
+                    <span class="match-status">UPCOMING</span>
+                    <a href="tickets.html" class="btn btn-secondary">
+                        Tickets
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">RESULTS</span>
+
+            <h2>Recent matches.</h2>
+
+        </div>
+
+
+        <div class="results-list">
+
+            <article class="result-card">
+
+                <div>
+                    <span>10 SEP 2026</span>
+
+                    <h3>
+                        Singh FC <b>2 — 1</b> Tigers FC
+                    </h3>
+                </div>
+
+                <strong class="result-win">WIN</strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <div>
+                    <span>03 SEP 2026</span>
+
+                    <h3>
+                        Eagles FC <b>1 — 1</b> Singh FC
+                    </h3>
+                </div>
+
+                <strong class="result-draw">DRAW</strong>
+
+            </article>
+
+
+            <article class="result-card">
+
+                <div>
+                    <span>28 AUG 2026</span>
+
+                    <h3>
+                        Singh FC <b>3 — 0</b> Rivals FC
+                    </h3>
+                </div>
+
+                <strong class="result-win">WIN</strong>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="container cta-inner">
+
+        <div>
+            <span class="eyebrow">MATCHDAY</span>
+            <h2>Don't watch from the sidelines.</h2>
+        </div>
+
+        <a href="tickets.html" class="btn btn-primary">
+            Get Tickets →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <a href="home.html" class="brand footer-brand">
+                <span class="brand-mark">SFC</span>
+                <span class="brand-name">SINGH FC</span>
+            </a>
+
+            <p>
+                Built for the 90 minutes.<br>
+                Designed for the next generation.
+            </p>
+        </div>
+
+        <div>
+            <h4>Explore</h4>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html">Matches</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+        <div>
+            <h4>Support</h4>
+            <a href="tickets.html">Tickets</a>
+            <a href="jersey.html">Official Jersey</a>
+            <a href="JOIN.html">Fan Club</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <h4>Stay Connected</h4>
+
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email" required>
+                <button type="submit">→</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#">IG</a>
+                <a href="#">X</a>
+                <a href="#">YT</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+        <span>© 2026 Singh FC. Portfolio project.</span>
+        <span>Football. Identity. Ambition.</span>
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>

@@ -3,200 +3,521 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singh FC - Home</title>
-    <link rel="stylesheet" href="home.css">
+    <meta name="description" content="Singh FC official football club website">
+    <title>Singh FC | Official Football Club</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- TOP Section -->
-    <header>
-        <div class="container">
-            <h1>Singh FC</h1>
-            <nav>
-                <ul>
-                    <li><a href="home.html" target="_blank">Home</a></li>
-                    <li><a href="about.html" target="_blank">About</a></li>
-                    <li><a href="Team.html" target="_blank">Team</a></li>
-                    <li><a href="matches.html" target="_blank">Matches</a></li>
-                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
-                    <li><a href="contact.html"target="_blank">Contact</a></li>
-                    <li><a href="blog.html" target="_blank">Blog</a></li>
-                    
 
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="site-header">
+    <div class="container nav-wrap">
 
-    <!-- CLUB Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            
-            <h2 id="a">Champions of 2024</h2>
-           
-                
-            <a href="JOIN.html" target="_blank"> <button class="cta"> Join the Fan Club  </button> </a>
-                
-           
-            
-        </div>
-    </section>
+        <a href="home.html" class="brand">
+            <span class="brand-mark">SFC</span>
+            <span class="brand-name">SINGH FC</span>
+        </a>
 
-    <!-- Upcoming Matches Section with Countdown -->
-    <section id="matches" class="matches">
-        <div class="container">
-            <h2>Upcoming Matches</h2>
-            <div class="countdown">
-                <h3>Next Match In:</h3>
-                <div id="timer">
-                    <span id="days">00</span> Days
-                    <span id="hours">00</span> Hours
-                    <span id="minutes">00</span> Minutes
-                    <span id="seconds">00</span> Seconds
-                </div>
+        <button class="menu-toggle" type="button" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="main-nav">
+            <a href="home.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html">Matches</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">News</a>
+            <a href="contact.html">Contact</a>
+            <a href="tickets.html" class="nav-cta">Tickets</a>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-copy">
+
+            <span class="eyebrow">SINGH FC · 2026/27</span>
+
+            <h1>
+                Built for<br>
+                the <span>90 minutes.</span>
+            </h1>
+
+            <p>
+                Football is more than a game. It's identity, discipline,
+                ambition and the people behind the badge.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="matches.html" class="btn btn-primary">
+                    View Fixtures →
+                </a>
+
+                <a href="Team.html" class="btn btn-outline">
+                    Meet the Squad
+                </a>
             </div>
+
         </div>
-    </section>
-    <script>
-        // Set the date and time of the next match
-const nextMatchDate = new Date("2024-11-01T15:00:00").getTime(); // Change this date and time as needed
 
-// Update the countdown every 1 second
-const countdownInterval = setInterval(() => {
-    const now = new Date().getTime();
-    const distance = nextMatchDate - now;
+        <div class="hero-season">
+            <span>SEASON</span>
+            <strong>26<small>/27</small></strong>
+        </div>
 
-    // Time calculations for days, hours, minutes, and seconds
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    </div>
 
-    // Display the result in the corresponding elements
-    document.getElementById("days").textContent = String(days).padStart(2, '0');
-    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+</section>
 
-    // If the countdown is over, write some text
-    if (distance < 0) {
-        clearInterval(countdownInterval);
-        document.getElementById("timer").innerHTML = "The match has started!";
-    }
-}, 1000);
 
-    </script>
+<section class="stats-section">
 
-    <!-- Team Highlights Section -->
-    <section id="team" class="team">
-        <div class="container">
-            <h2>Meet Our Stars</h2>              
-            <div class="team-grid">
-                <div class="player-card">
-                    <img src="projectimages/gurjant.jpeg" alt="Player 1">
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>15</strong>
+            <span>Championships</span>
+        </div>
+
+        <div class="stat">
+            <strong>350</strong>
+            <span>Matches</span>
+        </div>
+
+        <div class="stat">
+            <strong>620</strong>
+            <span>Goals</span>
+        </div>
+
+        <div class="stat">
+            <strong>1995</strong>
+            <span>Founded</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading split-heading">
+
+            <div>
+                <span class="eyebrow">MATCHDAY</span>
+                <h2>Next Match</h2>
+            </div>
+
+            <a href="matches.html" class="text-link">
+                All Fixtures →
+            </a>
+
+        </div>
+
+
+        <article class="next-match-card">
+
+            <div class="match-information">
+
+                <div class="competition">
+                    <span>LEAGUE · MATCHDAY 08</span>
+                    <strong>17 OCT 2026</strong>
+                </div>
+
+
+                <div class="teams">
+
+                    <div class="team">
+
+                        <div class="team-badge">
+                            SFC
+                        </div>
+
+                        <h3>Singh FC</h3>
+                        <span>HOME</span>
+
+                    </div>
+
+
+                    <div class="versus">
+
+                        <span>19:30</span>
+                        <strong>VS</strong>
+                        <small>National Arena</small>
+
+                    </div>
+
+
+                    <div class="team">
+
+                        <div class="team-badge opponent">
+                            UFC
+                        </div>
+
+                        <h3>United FC</h3>
+                        <span>AWAY</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="match-countdown">
+
+                <span>KICK-OFF IN</span>
+
+                <div class="countdown" data-target="2026-10-17T19:30:00">
+
+                    <div>
+                        <strong id="days">00</strong>
+                        <small>DAYS</small>
+                    </div>
+
+                    <div>
+                        <strong id="hours">00</strong>
+                        <small>HOURS</small>
+                    </div>
+
+                    <div>
+                        <strong id="minutes">00</strong>
+                        <small>MIN</small>
+                    </div>
+
+                    <div>
+                        <strong id="seconds">00</strong>
+                        <small>SEC</small>
+                    </div>
+
+                </div>
+
+                <a href="tickets.html" class="btn btn-primary">
+                    Get Tickets
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="section section-dark">
+
+    <div class="container">
+
+        <div class="section-heading split-heading">
+
+            <div>
+                <span class="eyebrow">FIRST TEAM</span>
+                <h2>The Players</h2>
+            </div>
+
+            <a href="Team.html" class="text-link">
+                Full Squad →
+            </a>
+
+        </div>
+
+
+        <div class="player-grid">
+
+            <article class="player-card">
+
+                <div class="player-image">
+                    <img src="projectimages/gurjant.jpeg" alt="Gurjant Singh">
+                    <span class="player-number">09</span>
+                </div>
+
+                <div class="player-info">
+                    <span>FORWARD</span>
                     <h3>Gurjant Singh</h3>
-                    <p>Position: Forward</p>
+
+                    <div class="player-meta">
+                        <span>#09</span>
+                        <span>ST</span>
+                    </div>
                 </div>
-                <div class="player-card">
-                    <img src="projectimages/amritpal.jpeg" alt="Player 2">
+
+            </article>
+
+
+            <article class="player-card">
+
+                <div class="player-image">
+                    <img src="projectimages/amritpal.jpeg" alt="Amritpal Singh">
+                    <span class="player-number">10</span>
+                </div>
+
+                <div class="player-info">
+                    <span>MIDFIELDER</span>
                     <h3>Amritpal Singh</h3>
-                    <p>Position: Midfielder</p>
+
+                    <div class="player-meta">
+                        <span>#10</span>
+                        <span>CM</span>
+                    </div>
                 </div>
-                <div class="player-card">
-                    <img src="projectimages/gurniwaz.jpeg" alt="Player 3">
+
+            </article>
+
+
+            <article class="player-card">
+
+                <div class="player-image">
+                    <img src="projectimages/gurniwaz.jpeg" alt="Gurniwaz Singh">
+                    <span class="player-number">05</span>
+                </div>
+
+                <div class="player-info">
+                    <span>DEFENDER</span>
                     <h3>Gurniwaz Singh</h3>
-                    <p>Position: Defender</p>
+
+                    <div class="player-meta">
+                        <span>#05</span>
+                        <span>CB</span>
+                    </div>
                 </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading split-heading">
+
+            <div>
+                <span class="eyebrow">SFC MEDIA</span>
+                <h2>Latest News</h2>
             </div>
+
+            <a href="blog.html" class="text-link">
+                View All News →
+            </a>
+
         </div>
-    </section>
-    <!-- Footer Section -->
-<footer class="footer">
-    <div class="footer-container">
-      <!-- Footer Links -->
-      <div class="footer-links">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="blog.html">News</a></li>
-          <li><a href="Team.html">Teams</a></li>
-          <li><a href="matches.html">Matches</a></li>
-          <li><a href="about.html">Standings</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </div>
-  
-      <!-- Newsletter Signup -->
-      <div class="footer-newsletter">
-        <h3>Newsletter</h3>
-        <p>Sign up for the latest news and updates on your favorite teams.</p>
-        <form action="#">
-          <input type="email" placeholder="Enter your email" required>
-          <button type="submit">Subscribe</button>
-        </form>
-      </div>
-      <script>
-    document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector(".footer-newsletter form");
-  const emailInput = form.querySelector("input[type='email']");
-  const message = document.createElement("p");
-  message.style.display = "none"; // Start hidden
-  form.appendChild(message);
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevents the form from submitting in the traditional way
 
-    const emailValue = emailInput.value.trim();
-    if (!validateEmail(emailValue)) {
-      showMessage("Please enter a valid email address.", "error");
-    } else {
-      showMessage("Thank you for subscribing!", "success");
-      emailInput.value = ""; // Clear the input
-      // Here, you could add an API call to submit the email to your database or newsletter service
-    }
-  });
+        <div class="news-grid">
 
-  function validateEmail(email) {
-    // Basic email validation regex
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
+            <article class="news-card">
 
-  function showMessage(text, type) {
-    message.textContent = text;
-    message.style.display = "block";
-    message.style.color = type === "error" ? "red" : "green";
-  }
-});
-    </script>
-  
-      <!-- Promotions Section -->
-      <div class="footer-promotions">
-        <h3>Promotions</h3>
-        <p>Get the best deals on merchandise and tickets!</p>
-        <ul>
-            <li><a href="tickets.html">Buy One, Get One Free on Tickets</a></li>
-            <li><a href="jersey.html">Exclusive Jersey Discounts</a></li>
-        </ul>
-      </div>
-  
-      <!-- Social Media Links -->
-      <div class="footer-social">
-        <h3>Follow Us</h3>
-        <div class="social-icons">
-          <a href="acebook.com/home.php" class="social-icon">🔵</a>
-          <a href="https://www.instagram.com/" class="social-icon">🟦</a>
-          <a href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D" class="social-icon">🔶</a>
-          <a href="https://www.youtube.com/account" class="social-icon">🔴</a>
+                <img src="projectimages/4.jpeg" alt="Singh FC championship">
+
+                <div class="news-card-content">
+
+                    <span>05 OCT 2026 · CLUB</span>
+
+                    <h3>Singh FC's Road to Victory</h3>
+
+                    <p>
+                        The mentality, preparation and defining moments
+                        behind a memorable championship campaign.
+                    </p>
+
+                    <a href="blog.html">Read Story →</a>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <img src="projectimages/train.jpeg" alt="Singh FC training">
+
+                <div class="news-card-content">
+
+                    <span>21 SEP 2026 · TRAINING</span>
+
+                    <h3>Inside the Training Ground</h3>
+
+                    <p>
+                        What happens behind the scenes before Singh FC
+                        steps onto the pitch.
+                    </p>
+
+                    <a href="blog.html">Read Story →</a>
+
+                </div>
+
+            </article>
+
+
+            <article class="news-card">
+
+                <img src="projectimages/1.jpeg" alt="Singh FC player">
+
+                <div class="news-card-content">
+
+                    <span>15 SEP 2026 · PLAYER</span>
+
+                    <h3>Player Spotlight: Gurjant Singh</h3>
+
+                    <p>
+                        The story behind the number nine and his journey
+                        through the Singh FC system.
+                    </p>
+
+                    <a href="blog.html">Read Story →</a>
+
+                </div>
+
+            </article>
+
         </div>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2023 Singh Fc. All rights reserved.</p>
-    </div>
-  </footer>
-  
 
-    
+    </div>
+
+</section>
+
+
+<section class="stadium-section">
+
+    <div class="stadium-image">
+        <img src="projectimages/stadium.jpeg" alt="Singh FC stadium">
+    </div>
+
+    <div class="stadium-content">
+
+        <span class="eyebrow">HOME OF SINGH FC</span>
+
+        <h2>
+            The stadium<br>
+            is waiting.
+        </h2>
+
+        <p>
+            Matchday starts long before kick-off. It's the noise outside,
+            the lights, the supporters and the feeling when the players walk out.
+        </p>
+
+        <a href="gallery.html" class="btn btn-primary">
+            Explore Gallery →
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="container cta-inner">
+
+        <div>
+            <span class="eyebrow">SINGH FC FAN CLUB</span>
+
+            <h2>Be part of the badge.</h2>
+
+            <p>
+                Get club updates, matchday information and exclusive
+                supporter content.
+            </p>
+        </div>
+
+        <a href="JOIN.html" class="btn btn-primary">
+            Join the Fan Club →
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <a href="home.html" class="brand footer-brand">
+                <span class="brand-mark">SFC</span>
+                <span class="brand-name">SINGH FC</span>
+            </a>
+
+            <p>
+                Built for the 90 minutes.<br>
+                Designed for the next generation.
+            </p>
+        </div>
+
+
+        <div>
+            <h4>Explore</h4>
+            <a href="about.html">About</a>
+            <a href="Team.html">Team</a>
+            <a href="matches.html">Matches</a>
+            <a href="gallery.html">Gallery</a>
+        </div>
+
+
+        <div>
+            <h4>Support</h4>
+            <a href="tickets.html">Tickets</a>
+            <a href="jersey.html">Official Jersey</a>
+            <a href="JOIN.html">Fan Club</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+
+        <div>
+            <h4>Stay Connected</h4>
+
+            <form class="newsletter-form">
+                <input
+                    type="email"
+                    placeholder="Your email"
+                    required
+                >
+                <button type="submit">→</button>
+            </form>
+
+            <div class="social-links">
+                <a href="#">IG</a>
+                <a href="#">X</a>
+                <a href="#">YT</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+        <span>© 2026 Singh FC. Portfolio project.</span>
+        <span>Football. Identity. Ambition.</span>
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
